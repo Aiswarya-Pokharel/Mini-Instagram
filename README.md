@@ -1,16 +1,50 @@
-# React + Vite
+# Mini Instagram Backend (TDD Approach)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Feature 1: Get Posts API
 
-Currently, two official plugins are available:
+### Step 1: Write Failing Test
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- Created test for GET /api/posts/
+- Test expected status 200
+- Test failed initially
 
-## React Compiler
+### Step 2: Implement API
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Created `get_posts` view
+- Added URL route
+- Returned dummy JSON response
 
-## Expanding the ESLint configuration
+### Result
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+- Test passed successfully
+
+---
+
+## Tech Stack
+
+- Django
+- Django REST Framework
+- Pytest
+
+---
+
+## Run Project
+
+```bash
+python manage.py runserver
+pytest
+```
+
+---
+
+## API Endpoints
+
+### 1. Get Posts
+
+### Response
+
+```json
+{
+  "message": "Hello, Instagram API!"
+}
+```
